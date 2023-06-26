@@ -1,0 +1,37 @@
+
+## AWS CREDENTIALS
+server:
+    port: 8080
+spring:
+    datasource:
+        url: jdbc:postgresql://db-wf.cevmn37gbnpc.sa-east-1.rds.amazonaws.com/dev_wf #AWS DB IP
+        username: wfmasterdb #AWS user
+        password: M8EmXJQowLEg29xT8pn3 #password aws
+    jpa:
+        hibernate:
+            ddl-auto: update
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            jdbc:
+                lob.non-contextual-creation: true
+        properties:
+            hibernate:
+                show_sql: true
+
+## LOCAL E DOCKER CREDENTIALS
+# server:
+#     port: 8080
+# spring:
+#     datasource:
+#         # url: jdbc:postgresql://localhost:5433/db_docker  LOCALHOST
+#         url: jdbc:postgresql://172.18.0.2:5432/db_docker #DOCKER DB IP
+#         username: postgres #DEFAULT user
+#         password: 123 #password docker
+#     jpa:
+#         hibernate:
+#             ddl-auto: update
+#             dialect: org.hibernate.dialect.PostgreSQLDialect
+#             jdbc:
+#                 lob.non-contextual-creation: true
+#         properties:
+#             hibernate:
+#                 show_sql: true
